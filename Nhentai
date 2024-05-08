@@ -1,0 +1,15 @@
+// ==UserScript==
+// @name        NHentai Jump on Page Turn Fix
+// @namespace   Violentmonkey Scripts
+// @match       *://nhentai.net/g/*
+// @grant       none
+// @version     1.0
+// @author      -
+// @description Creates div with class advertisement to not make javascript throw exception.
+// ==/UserScript==
+(function() {
+  var contentDiv = document.getElementById("content");
+  var advertisementDiv = document.createElement('div');
+  advertisementDiv.classList.add('advertisement');
+  contentDiv.appendChild(advertisementDiv);
+})();
